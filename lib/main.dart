@@ -44,6 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
     [0, 2, 0, 2, 2, 2, 2, 2, 0, 2],
   ];
 
+  void moveToLeft() {}
+  void moveToRight() {}
+  void moveToDown() {}
+  void changeShape() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,8 +81,7 @@ class ActionPanel extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-            child: Container(
-              color: Colors.greenAccent,
+            child: Center(
               child: PreviewView(),
             ),
           ),
@@ -225,9 +229,9 @@ class BackgroundCanvas extends StatelessWidget {
 
 class PreviewView extends StatelessWidget {
   final List<List<int>> lists = [
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
+    [0, 0, 1, 0],
+    [0, 1, 1, 0],
+    [0, 1, 0, 0],
     [0, 0, 0, 0],
   ];
   // final List previews;
